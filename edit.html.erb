@@ -1,0 +1,31 @@
+<h2>Edit task</h2>
+<%= render partial: 'shared/flash' %>
+<%= render partial: 'shared/error', locals: {model: @task} %>
+<%= form_with model: @task do |f| %>
+    <table>
+        <tr>
+            <th><%= f.label :title,"Title" %></th>
+            <td><%= f.text_field :title %></td>
+        </tr>
+        <tr>
+            <th><%= f.label :startdate,"Start date" %></th>
+            <td><%= f.date_field :startdate %></td>
+        </tr>
+        <tr>
+            <th><%= f.label :enddate,"End date" %></th>
+            <td><%= f.date_field :enddate %></td>
+        </tr>
+        <tr>
+            <th><%= f.label :allday,"All day" %></th>
+            <td><%= f.check_box :allday %></td>
+        </tr>
+        <tr>
+            <th><%= f.label :memo,"Memo" %></th>
+            <td><%= f.text_area :memo %></td>
+        </tr>
+    </table>
+    <div>
+        <div class = "button"><%= f.submit "Update Now" %></div><br>
+        <div class = "button"><%= link_to "See all schedules", root_path %></div>
+    </div>
+<% end %>
