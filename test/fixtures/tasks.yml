@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  startdate: 2021-06-08
+  enddate: 2021-06-08
+  allday: MyString
+  edit: MyString
+  ref: MyString
+  del: MyString
+  memo: MyText
+
+two:
+  title: MyString
+  startdate: 2021-06-08
+  enddate: 2021-06-08
+  allday: MyString
+  edit: MyString
+  ref: MyString
+  del: MyString
+  memo: MyText

@@ -1,0 +1,44 @@
+<h2>All schedules</h2>
+<%= render partial: 'shared/flash' %>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>All day</th>
+      <th>Updated date</th>
+      <th>Detail</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tasks.each do |task| %>
+      <tr>
+        <td><%= task.title %></td>
+        <td><%= task.startdate %></td>
+        <td><%= task.enddate %></td>
+        <td>
+          <% if task.allday.present? %>
+            ○
+          <% end %>
+        </td>
+        <td><%= l task.updated_at %></td>
+        <td>
+          <%= link_to "Refarence", task %>
+        </td>
+        <td>
+          <%= link_to "Edit", [:edit, task] %>
+        </td>
+        <td>
+          <%= link_to "Delete", task, method: :delete, data: { confirm: "Do you want to delete?" } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<div class = "button"><%= link_to"Create task", :new_task %></div>
+<h3>Total: <%= @tasks.ids.count %> schedules</h3>

@@ -1,0 +1,10 @@
+ja:
+    activerecord:
+      attributes:
+        task:
+          EndDate: "End date"
+          Title: "Title"
+    time:
+      formats:
+        default: "%Y/%m/%d %H:%M"
+        short: "%Y-%m-%d"
